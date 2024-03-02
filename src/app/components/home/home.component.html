@@ -1,0 +1,51 @@
+<form class="container mt-5" [formGroup]="calculatorForm">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Calculadora
+                </div>
+                <div class="card-body">
+                    <input type="text" class="form-control mb-3" formControlName="result">
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('7')">7</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('8')">8</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('9')">9</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="clearResult()">C</button></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('4')">4</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('5')">5</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('6')">6</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="delLastDigit()">Del</button></div>
+                        
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('1')">1</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('2')">2</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('3')">3</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('+')">+</button></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('0')">0</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('.')">.</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult(',')">,</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('-')">-</button></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('√')">√</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('^')">^</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('/')">/</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('*')">*</button></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('log&lpar;')">log</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('&lpar;')">&#40;</button></div>
+                        <div class="col"><button class="btn btn-secondary btn-block square-btn" (click)="appendToResult('&rpar;')">&#41;</button></div>
+                        <div class="col"><button class="btn btn-primary btn-block square-btn" (click)="calculateResult()">=</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
