@@ -1,5 +1,25 @@
 <form class="container mt-5" [formGroup]="calculatorForm">
     <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card">
+                <div class="card-header">
+                    Instrucciones
+                </div>
+                <div class="card-body">
+                    <p>Para realizar una operación matemática, presione los botones de la calculadora y luego presione el botón de igual.</p>
+                    <p>Para borrar el último dígito presione el botón "Del".</p>
+                    <p>Para borrar la operación presione el botón "C".</p>
+                    <p>Para realizar una operación de raíz cuadrada presione el botón "√".</p>
+                    <p>Para realizar una operación de potencia presione el botón "^".</p>
+                    <p>
+                        Para realizar una operación de logaritmo presione el botón "log". <br>
+                        Si desea realizar un logaritmo con base específica, deberá ingresar la base y luego el número de  la siguiente forma: <b>"log&lpar;base&comma; número&rpar;"</b>. <br>
+                        Si no indica la base, se asumirá que el logaritmo es de base 10, <b>"log&lpar;número&rpar;"</b>.
+                    </p>
+                    <p>Para realizar una operación de paréntesis presione los botones "(" y ")".</p>
+                </div>
+            </div>
+        </div>
         <div class="col-md-6 col-lg-4">
             <div class="card">
                 <div class="card-header">
@@ -47,5 +67,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row justify-content-center">
+        
     </div>
 </form>

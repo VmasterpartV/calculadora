@@ -35,16 +35,16 @@ export class HomeComponent implements OnInit {
     let expression = this.calculatorForm.get('result').value;
 
     // Reemplazar símbolos específicos para evaluar correctamente
-    expression = expression.replace('√', 'Math.sqrt(');
+    // expression = expression.replace('√', 'Math.sqrt(');
     expression = expression.replace('^', '**');
 
     // Agregar paréntesis de cierre
-    const openParenthesis = (expression.match(/\(/g) || []).length;
-    const closeParenthesis = (expression.match(/\)/g) || []).length;
-    const difference = openParenthesis - closeParenthesis;
-    for (let i = 0; i < difference; i++) {
-      expression += ')';
-    }
+    // const openParenthesis = (expression.match(/\(/g) || []).length;
+    // const closeParenthesis = (expression.match(/\)/g) || []).length;
+    // const difference = openParenthesis - closeParenthesis;
+    // for (let i = 0; i < difference; i++) {
+    //   expression += ')';
+    // }
 
     console.log(expression);
 
@@ -67,6 +67,9 @@ export class HomeComponent implements OnInit {
         operations[i] = operations[i].replace(base, '');
         operations[i] = operations[i].replace(')', '');
         operations[i] = this.getBaseLog(10, base);
+      } else if (operations[i].includes('√')) {
+        operations[i] = operations[i].replace('√', 'Math.sqrt(');
+        operations[i] += ')';
       }
     }
 
